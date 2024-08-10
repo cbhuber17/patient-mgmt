@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
-// import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "next-themes";
 
-// import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,16 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      //   className={
-      //     cn(
-      //     "min-h-screen bg-dark-300 font-sans antialiased",
-      //     fontSans.variable
-      //   )
-      // }
+        className={cn(
+          "min-h-screen bg-dark-300 font-sans antialiased",
+          fontSans.variable
+        )}
       >
-        {/* <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
-        </ThemeProvider> */}
+        </ThemeProvider>
       </body>
     </html>
   );
